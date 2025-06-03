@@ -1,5 +1,5 @@
 ---
-title: "reggression"
+title: "Reggression"
 author: "Adam Meddeb"
 date: "2025-06-03"
 output: 
@@ -13,10 +13,6 @@ output:
 
 För att kunna se hur regression fungerar i praktiken så behöver vi data. Jag har valt att använda mtcars dataset som medföljer R. Vi börjar med att titta på hur datasetet ser ut
 
-
-``` r
-head(mtcars, n =10)
-```
 
 ```
 ##                    mpg cyl  disp  hp drat    wt  qsec vs am gear carb
@@ -37,12 +33,29 @@ $$
 y = \beta_0 + \beta_1 x + \epsilon
 $$
 
-## Hur beräknar man beta?
+## Antaganden i regression
 
-## Including Plots
+- #1 **Normalitet**. Residualerna ska vara normalfördelade, inte variablerna!
 
-You can also embed plots, for example:
+- #2 **Linjaritet**. Det ska föreligga ett linjärt samband mellan variablerna
 
-![](regression_explained_files/figure-html/pressure-1.png)<!-- -->
+- #3 **Homogenitet av varians**. Residualerna ska ha en "jämn" varians.
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Antagande om normalitet
+
+![](regression_explained_files/figure-html/antagande1-1.png)<!-- -->
+
+## Antaganden om linjaritet
+
+
+```
+## `geom_smooth()` using formula = 'y ~ x'
+```
+
+![](regression_explained_files/figure-html/antagande2-1.png)<!-- -->
+
+## Hur får man fram beta koefficienterna?
+
+
+
+
